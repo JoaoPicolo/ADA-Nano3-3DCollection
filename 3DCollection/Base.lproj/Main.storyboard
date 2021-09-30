@@ -15,25 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="UkD-SN-yrz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR0-ZP-1qG">
-                                <rect key="frame" x="173.66666666666666" y="423" width="67" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="lP6-O1-4gf"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="qEj-WB-85T"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="amt-Ye-vaC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eR0-ZP-1qG" firstAttribute="centerY" secondItem="UkD-SN-yrz" secondAttribute="centerY" id="2ab-Al-AAL"/>
-                            <constraint firstItem="eR0-ZP-1qG" firstAttribute="centerX" secondItem="UkD-SN-yrz" secondAttribute="centerX" id="UuN-uX-cHq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="60c-Me-BA0"/>
                 </viewController>
@@ -44,7 +27,7 @@
         <!--ARView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ARViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARViewController" id="BYZ-38-t0r" userLabel="ARView" customClass="ARViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
