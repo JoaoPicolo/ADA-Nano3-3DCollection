@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wib-aG-Q52">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wib-aG-Q52">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,34 +11,43 @@
         <scene sceneID="ypi-3i-6oc">
             <objects>
                 <viewController id="ffd-QE-JHB" customClass="ModelViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3vL-nB-hFS"/>
+                        <viewControllerLayoutGuide type="bottom" id="sgS-qc-9ab"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UkD-SN-yrz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="amt-Ye-vaC"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqB-4k-cXM">
+                                <rect key="frame" x="-11" y="-11" width="442" height="469"/>
+                            </arView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55t-Bn-Qkx">
+                                <rect key="frame" x="40" y="483" width="344" height="413"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="55t-Bn-Qkx" firstAttribute="leading" secondItem="UkD-SN-yrz" secondAttribute="leadingMargin" constant="20" id="7TC-bt-UvN"/>
+                            <constraint firstItem="55t-Bn-Qkx" firstAttribute="top" secondItem="tqB-4k-cXM" secondAttribute="bottom" constant="25" id="8b2-nt-GB2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tqB-4k-cXM" secondAttribute="trailing" constant="-37" id="Bi3-dF-yLn"/>
+                            <constraint firstItem="tqB-4k-cXM" firstAttribute="leading" secondItem="UkD-SN-yrz" secondAttribute="leadingMargin" constant="-31" id="IMf-eS-RiG"/>
+                            <constraint firstItem="55t-Bn-Qkx" firstAttribute="top" secondItem="UkD-SN-yrz" secondAttribute="top" constant="483" id="Y4Y-u4-xcc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="55t-Bn-Qkx" secondAttribute="bottom" constant="-34" id="dRl-aj-4HL"/>
+                            <constraint firstItem="tqB-4k-cXM" firstAttribute="top" secondItem="UkD-SN-yrz" secondAttribute="topMargin" constant="-99" id="qmr-pe-12z"/>
+                            <constraint firstAttribute="trailing" secondItem="55t-Bn-Qkx" secondAttribute="trailing" constant="30" id="zaR-Ew-bjH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="60c-Me-BA0"/>
+                    <connections>
+                        <outlet property="arView" destination="tqB-4k-cXM" id="rLm-j6-Rca"/>
+                        <outlet property="contentView" destination="55t-Bn-Qkx" id="oyI-t4-hch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nM-q6-xLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-97.101449275362327" y="144.64285714285714"/>
-        </scene>
-        <!--ARView-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="ARViewController" id="BYZ-38-t0r" userLabel="ARView" customClass="ARViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
-                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arView>
-                    <navigationItem key="navigationItem" id="M7a-3b-LeS"/>
-                    <connections>
-                        <outlet property="arView" destination="8bC-Xf-vdC" id="TPV-4x-avp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="893" y="145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQ5-ou-wdd">
