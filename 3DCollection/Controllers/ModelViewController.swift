@@ -13,15 +13,35 @@ class ModelViewController: UIViewController {
     @IBOutlet var arView: ARView!
     @IBOutlet var contentView: UIView!
     
+    var project: Project!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupLayout()
     }
     
     private func setupLayout() {
         view.insetsLayoutMarginsFromSafeArea = false
-
         setUpContent()
+        addGesture()
+    }
+    
+    private func addGesture() {
+        let swipeRight = UISwipeGestureRecognizer()
+        swipeRight.addTarget(self, action: #selector(backSegue))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+    }
+    
+    @objc
+    private func backSegue() {
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = .push
+        transition.subtype = .fromLeft
+        self.view.window?.layer.add(transition, forKey: kCATransition)
+        dismiss(animated: false)
     }
     
     private func setUpContent() {
@@ -34,7 +54,7 @@ class ModelViewController: UIViewController {
         
         let nameView = UITextView(frame: CGRect(x: 0, y: 0,
                                                 width: viewHalfWidth, height: 50))
-        nameView.text = "Saturn"
+        nameView.text = project.projectName
         nameView.font = .systemFont(ofSize: 34, weight: .bold)
         contentView.addSubview(nameView)
         
@@ -56,7 +76,7 @@ class ModelViewController: UIViewController {
 
         let description = UILabel(frame: CGRect(x: 0, y: 80,
                                                 width: width - 15, height: 120))
-        description.text = "That's a very cool project found on NASA's website and used as a model for my Apps's ideia at the Apple Developer Academy."
+        description.text = project.projectDescription
         description.numberOfLines = 0
         description.font = .systemFont(ofSize: 14, weight: .regular)
         contentView.addSubview(description)
@@ -84,7 +104,7 @@ extension ModelViewController {
     }
     
     func setupEntities() {
-        let modelEntity = try! ModelEntity.loadModel(named: "Saturn")
+        let modelEntity = try! ModelEntity.loadModel(named: project.projectModelName)
         modelEntity.generateCollisionShapes(recursive: true)
         enableGestures(modelEntity)
 

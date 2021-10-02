@@ -10,7 +10,7 @@
         <!--Model View Controller-->
         <scene sceneID="ypi-3i-6oc">
             <objects>
-                <viewController id="ffd-QE-JHB" customClass="ModelViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectView" id="ffd-QE-JHB" customClass="ModelViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3vL-nB-hFS"/>
                         <viewControllerLayoutGuide type="bottom" id="sgS-qc-9ab"/>
@@ -20,20 +20,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqB-4k-cXM">
-                                <rect key="frame" x="-11" y="-11" width="442" height="469"/>
+                                <rect key="frame" x="-11" y="-55" width="442" height="605"/>
                             </arView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55t-Bn-Qkx">
-                                <rect key="frame" x="40" y="483" width="344" height="413"/>
+                                <rect key="frame" x="40" y="580" width="344" height="316"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="55t-Bn-Qkx" firstAttribute="leading" secondItem="UkD-SN-yrz" secondAttribute="leadingMargin" constant="20" id="7TC-bt-UvN"/>
-                            <constraint firstItem="55t-Bn-Qkx" firstAttribute="top" secondItem="tqB-4k-cXM" secondAttribute="bottom" constant="25" id="8b2-nt-GB2"/>
+                            <constraint firstItem="55t-Bn-Qkx" firstAttribute="top" secondItem="tqB-4k-cXM" secondAttribute="bottom" constant="30" id="8b2-nt-GB2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tqB-4k-cXM" secondAttribute="trailing" constant="-37" id="Bi3-dF-yLn"/>
                             <constraint firstItem="tqB-4k-cXM" firstAttribute="leading" secondItem="UkD-SN-yrz" secondAttribute="leadingMargin" constant="-31" id="IMf-eS-RiG"/>
-                            <constraint firstItem="55t-Bn-Qkx" firstAttribute="top" secondItem="UkD-SN-yrz" secondAttribute="top" constant="483" id="Y4Y-u4-xcc"/>
+                            <constraint firstItem="55t-Bn-Qkx" firstAttribute="top" secondItem="UkD-SN-yrz" secondAttribute="top" constant="580" id="Y4Y-u4-xcc"/>
                             <constraint firstAttribute="bottomMargin" secondItem="55t-Bn-Qkx" secondAttribute="bottom" constant="-34" id="dRl-aj-4HL"/>
                             <constraint firstItem="tqB-4k-cXM" firstAttribute="top" secondItem="UkD-SN-yrz" secondAttribute="topMargin" constant="-99" id="qmr-pe-12z"/>
                             <constraint firstAttribute="trailing" secondItem="55t-Bn-Qkx" secondAttribute="trailing" constant="30" id="zaR-Ew-bjH"/>
@@ -47,7 +47,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nM-q6-xLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97.101449275362327" y="144.64285714285714"/>
+            <point key="canvasLocation" x="1098.5507246376812" y="144.64285714285714"/>
+        </scene>
+        <!--Projects View Controller-->
+        <scene sceneID="4NZ-4R-HYQ">
+            <objects>
+                <viewController id="Ggi-8h-kPH" customClass="ProjectsViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uhc-Rc-OFL"/>
+                        <viewControllerLayoutGuide type="bottom" id="raJ-JU-5I6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mPJ-Mb-2za">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bUx-U4-T1a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1y-dx-nYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQ5-ou-wdd">
@@ -60,7 +79,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ffd-QE-JHB" kind="relationship" relationship="rootViewController" id="b4o-om-FEQ"/>
+                        <segue destination="Ggi-8h-kPH" kind="relationship" relationship="rootViewController" id="rPl-Gu-EDq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjC-60-Wd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
