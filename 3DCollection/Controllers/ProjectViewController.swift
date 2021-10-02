@@ -9,7 +9,7 @@ import UIKit
 import ARKit
 import RealityKit
 
-class ModelViewController: UIViewController {
+class ProjectViewController: UIViewController {
     @IBOutlet var arView: ARView!
     @IBOutlet var contentView: UIView!
     
@@ -74,7 +74,7 @@ class ModelViewController: UIViewController {
         label.font = .systemFont(ofSize: 17, weight: .bold)
         contentView.addSubview(label)
 
-        let description = UILabel(frame: CGRect(x: 0, y: 80,
+        let description = UILabel(frame: CGRect(x: 0, y: 100,
                                                 width: width - 15, height: 120))
         description.text = project.projectDescription
         description.numberOfLines = 0
@@ -89,7 +89,7 @@ class ModelViewController: UIViewController {
 }
 
 
-extension ModelViewController {
+extension ProjectViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

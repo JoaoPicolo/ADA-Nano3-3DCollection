@@ -23,7 +23,7 @@
 		C4BDBDFE2705E45D0078156E /* Mercury.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C4BDBDF52705E45D0078156E /* Mercury.usdz */; };
 		C4BDBDFF2705E45D0078156E /* Neptune.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C4BDBDF62705E45D0078156E /* Neptune.usdz */; };
 		C4BDBE002705E45D0078156E /* Saturn.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C4BDBDF72705E45D0078156E /* Saturn.usdz */; };
-		C4BDBE052705E9480078156E /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDBE042705E9480078156E /* ModelViewController.swift */; };
+		C4BDBE052705E9480078156E /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BDBE042705E9480078156E /* ProjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,7 @@
 		C4BDBDF52705E45D0078156E /* Mercury.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Mercury.usdz; sourceTree = "<group>"; };
 		C4BDBDF62705E45D0078156E /* Neptune.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Neptune.usdz; sourceTree = "<group>"; };
 		C4BDBDF72705E45D0078156E /* Saturn.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Saturn.usdz; sourceTree = "<group>"; };
-		C4BDBE042705E9480078156E /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		C4BDBE042705E9480078156E /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 		C4BDBE012705E66A0078156E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C4BDBE042705E9480078156E /* ModelViewController.swift */,
+				C4BDBE042705E9480078156E /* ProjectViewController.swift */,
 				C44C431627073CD20058140F /* ProjectsViewController.swift */,
 			);
 			path = Controllers;
@@ -196,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44C431727073CD20058140F /* ProjectsViewController.swift in Sources */,
-				C4BDBE052705E9480078156E /* ModelViewController.swift in Sources */,
+				C4BDBE052705E9480078156E /* ProjectViewController.swift in Sources */,
 				C4BDBDDC2705D9B20078156E /* ViewController.swift in Sources */,
 				C4BDBDDA2705D9B20078156E /* AppDelegate.swift in Sources */,
 			);

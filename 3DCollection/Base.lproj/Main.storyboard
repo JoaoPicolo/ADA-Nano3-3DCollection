@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wib-aG-Q52">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wib-aG-Q52">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Model View Controller-->
+        <!--Project View Controller-->
         <scene sceneID="ypi-3i-6oc">
             <objects>
-                <viewController storyboardIdentifier="ProjectView" id="ffd-QE-JHB" customClass="ModelViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3vL-nB-hFS"/>
-                        <viewControllerLayoutGuide type="bottom" id="sgS-qc-9ab"/>
-                    </layoutGuides>
+                <viewController storyboardIdentifier="ProjectView" id="ffd-QE-JHB" customClass="ProjectViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UkD-SN-yrz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +24,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="F0R-Tw-GDo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="55t-Bn-Qkx" firstAttribute="leading" secondItem="UkD-SN-yrz" secondAttribute="leadingMargin" constant="20" id="7TC-bt-UvN"/>
@@ -36,7 +34,7 @@
                             <constraint firstItem="55t-Bn-Qkx" firstAttribute="top" secondItem="UkD-SN-yrz" secondAttribute="top" constant="580" id="Y4Y-u4-xcc"/>
                             <constraint firstAttribute="bottomMargin" secondItem="55t-Bn-Qkx" secondAttribute="bottom" constant="-34" id="dRl-aj-4HL"/>
                             <constraint firstItem="tqB-4k-cXM" firstAttribute="top" secondItem="UkD-SN-yrz" secondAttribute="topMargin" constant="-99" id="qmr-pe-12z"/>
-                            <constraint firstAttribute="trailing" secondItem="55t-Bn-Qkx" secondAttribute="trailing" constant="30" id="zaR-Ew-bjH"/>
+                            <constraint firstItem="F0R-Tw-GDo" firstAttribute="trailing" secondItem="55t-Bn-Qkx" secondAttribute="trailing" constant="30" id="zaR-Ew-bjH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="60c-Me-BA0"/>
@@ -53,13 +51,10 @@
         <scene sceneID="4NZ-4R-HYQ">
             <objects>
                 <viewController id="Ggi-8h-kPH" customClass="ProjectsViewController" customModule="_DCollection" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Uhc-Rc-OFL"/>
-                        <viewControllerLayoutGuide type="bottom" id="raJ-JU-5I6"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mPJ-Mb-2za">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XtO-hz-7Nx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="bUx-U4-T1a"/>
