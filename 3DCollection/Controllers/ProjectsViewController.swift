@@ -63,6 +63,11 @@ class ProjectsViewController: UIViewController {
 
 extension ProjectsViewController: UITableViewDelegate, UITableViewDataSource {
     private func setupCell(project: Project, cell: UITableViewCell) {
+        for subview in cell.subviews {
+            subview.removeFromSuperview()
+        }
+        
+        
         let cellWidth = cell.bounds.width
         let cellHeight = cell.bounds.height
         let imageWidth = cellWidth / 4
@@ -88,7 +93,6 @@ extension ProjectsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.addSubview(imageView)
         cell.addSubview(descriptionView)
         cell.selectionStyle = .none
-        cell.clearsContextBeforeDrawing = true
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -101,6 +105,7 @@ extension ProjectsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = projectsTableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
+
         setupCell(project: projects[indexPath.row], cell: cell)
 
         return cell
